@@ -43,10 +43,12 @@ public class LinkedListTest {
     @Test
     public void testPrintList() {
         System.out.println("printList");
-        LinkedList instance = new LinkedList();
-        instance.printList();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        LinkedList<Integer> list = new LinkedList();
+        int[] nums = {1,3,5,4};
+        
+        for (int i = 0; i < nums.length; i++)
+            list.insertAtEnd(nums[i]);
+        list.printList();
     }
 
     /**

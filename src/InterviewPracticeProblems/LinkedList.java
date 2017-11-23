@@ -22,8 +22,8 @@ public class LinkedList<T> {
        }
     }        
     // The head of the Linked List
-    private ListNode head;
-    private ListNode ptr;
+    private ListNode head = null;
+    private ListNode ptr = null;
     
     /**
      * Print the linked list
@@ -32,7 +32,7 @@ public class LinkedList<T> {
     public void printList() {
         ListNode tmpNode = head;
         while (tmpNode != null) {
-            System.out.println(tmpNode + "->");
+            System.out.println(tmpNode.value + "->");
             tmpNode = tmpNode.next;
         }
         System.out.println("FIN");
@@ -88,8 +88,7 @@ public class LinkedList<T> {
     private boolean isAddingFirstNode(T data) {
         boolean added = false;
         if (this.head == null) {
-            this.head.value = data;
-            this.head.next = null;
+            this.head = new ListNode(data);
             added = true;
         }
         return added;
